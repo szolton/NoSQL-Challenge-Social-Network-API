@@ -25,4 +25,4 @@ In conclusion, I set up the social network API to:
 
 The hardest part was just working with the JavaScript and the weather API's to adjust them to how I wanted the information to look on the page, and fine-tuning the CSS.
 
-Please follow this link to the successful, full deployed site on GitHub: https://github.com/szolton/NoSQL-Challenge-Social-Network-API and walkthrough video: 
+Please follow this link to the successful, full deployed site on GitHub: https://github.com/szolton/NoSQL-Challenge-Social-Network-API and walkthrough video: https://vimeo.com/978415873
