@@ -23,6 +23,4 @@ In conclusion, I set up the social network API to:
 - When you test API POST, PUT, and DELETE routes in Insomnia, you are able to create, update and delete users and thoughts in your database
 - When you test API POST and DELETE routes in Insomnia, you're then able to create and delete reactions to thoughts and add and remove friends to a users friend list
 
-The hardest part was just working with the JavaScript and the weather API's to adjust them to how I wanted the information to look on the page, and fine-tuning the CSS.
-
 Please follow this link to the successful, full deployed site on GitHub: https://github.com/szolton/NoSQL-Challenge-Social-Network-API and walkthrough video: https://vimeo.com/978415873
