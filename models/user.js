@@ -1,6 +1,8 @@
+// Import necessary modules from Mongoose and Moment
 const { Schema, model } = require('mongoose');
 const moment = require('moment');
 
+// Define the UserSchema
 const UserSchema = new Schema({
     username: {
         type: String,
@@ -12,35 +14,37 @@ const UserSchema = new Schema({
         type: String,
         required: true,
         unique: true,
-        match: [/.+@.+\..+/]
+        match: [/.+@.+\..+/] // Validate email format using regex
     },
     thoughts: [
         {
             type: Schema.Types.ObjectId,
-            ref: 'Thought'
+            ref: 'Thought' // Reference to the Thought model
         }
     ],
     friends: [
         {
             type: Schema.Types.ObjectId,
-            ref: 'User'
+            ref: 'User' // Reference to other User documents (self-referencing)
         }
     ]
 },
     {
+        // Define JSON serialization options
         toJSON: {
-            virtuals: true
+            virtuals: true // Include virtual properties when converting to JSON
         },
-        id: false
+        id: false // Disable the default 'id' virtual getter
     }
 );
 
+// Define a virtual property 'friendCount' to dynamically calculate the number of friends
 UserSchema.virtual('friendCount').get(function () {
-    return this.friends.length;
+    return this.friends.length; // Returns the length of the friends array
 });
 
-// create the User model using the UserSchema
+// Create the User model using the UserSchema
 const User = model('User', UserSchema);
 
-// export the User model
+// Export the User model to be used in other parts of the application
 module.exports = User;
